@@ -23,4 +23,4 @@ Asegúrate de tener Node.js instalado en tu sistema. Puedes descargarlo desde [n
     ```bash
     http://localhost:5173/
 
-Este README proporciona instrucciones breves y claras para que el usuario cliente pueda iniciar el proyecto en Vite, utilizando emojis para hacerlo más dinámico y amigable. ¡Espero que te sea útil!
+Este README proporciona instrucciones breves y claras para que el usuario cliente pueda iniciar el proyecto en Vite, ¡Espero que te sea útil!
