@@ -13,7 +13,21 @@ def get_mascotas():
         mascotas = cursor.fetchall()
         cursor.close()
         db.close()
-        return jsonify({'mascotas': mascotas, 'res': True}), 200
+
+        mascotas_list = []
+        for mascota in mascotas:
+            mascota_id, nombre, edad, tamaño, raza, temperamento, imagen_url = mascota
+            mascotas_list.append({
+                'mascota_id': mascota_id,
+                'nombre': nombre,
+                'edad': edad,
+                'tamaño': tamaño,
+                'raza': raza,
+                'temperamento': temperamento,
+                'imagen_url': imagen_url
+            })
+
+        return jsonify({'mascotas': mascotas_list, 'res': True}), 200
     
     except Exception as e:
         return jsonify({'error': str(e), 'res': False}), 500
