@@ -11,3 +11,7 @@ def get_mascotas():
 @main.route('/<int:id>', methods=['GET'])
 def get_mascotas_by_id(id):
     return traer_mascotas_por_id(id)
+
+@main.route('/registrar', methods=['POST'])
+def register_mascota():
+    return registrar_mascota()

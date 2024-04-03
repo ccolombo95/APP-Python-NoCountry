@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import jsonify, request
 from database.db import conectar_db
 
 def traer_mascotas():
@@ -53,6 +53,29 @@ def traer_mascotas_por_id(id):
         
         else:
             return jsonify({'error': 'Mascota no encontrada', 'res': False}), 404
+
+    except Exception as e:
+        return jsonify({'error': str(e), 'res': False}), 500
+
+def registrar_mascota():
+    try:
+        datos = request.get_json()
+
+        nombre = datos['nombre']
+        edad = datos['edad']
+        tamaño = datos['tamaño']
+        raza = datos['raza']
+        temperamento = datos['temperamento']
+        imagen_url = datos['imagen_url']
+
+        db = conectar_db()
+        cursor = db.cursor()
+        cursor.execute("INSERT INTO mascotas (nombre, edad, tamaño, raza, temperamento, imagen_url) VALUES (%s, %s, %s, %s, %s, %s)", (nombre, edad, tamaño, raza, temperamento, imagen_url))
+        db.commit()
+        cursor.close()
+        db.close()
+
+        return jsonify({'message': 'Mascota registrada exitosamente', 'res': True}), 201
 
     except Exception as e:
         return jsonify({'error': str(e), 'res': False}), 500
