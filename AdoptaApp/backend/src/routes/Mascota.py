@@ -15,3 +15,11 @@ def get_mascotas_by_id(id):
 @main.route('/registrar', methods=['POST'])
 def register_mascota():
     return registrar_mascota()
+
+@main.route('/actualizar/<int:id>', methods=['PUT'])
+def update_mascota(id):
+    return actualizar_mascota(id)
+
+@main.route('/eliminar/<int:id>', methods=['DELETE'])
+def delete_mascota(id):
+    return eliminar_mascota(id)
