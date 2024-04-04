@@ -79,3 +79,40 @@ def registrar_mascota():
 
     except Exception as e:
         return jsonify({'error': str(e), 'res': False}), 500
+
+def actualizar_mascota(id):
+    try:
+        datos = request.get_json()
+
+        nombre = datos['nombre']
+        edad = datos['edad']
+        tamaño = datos['tamaño']
+        raza = datos['raza']
+        temperamento = datos['temperamento']
+        imagen_url = datos['imagen_url']
+
+        db = conectar_db()
+        cursor = db.cursor()
+        cursor.execute("UPDATE mascotas SET nombre=%s, edad=%s, tamaño=%s, raza=%s, temperamento=%s, imagen_url=%s WHERE id=%s", (nombre, edad, tamaño, raza, temperamento, imagen_url,id))
+        db.commit()
+        cursor.close()
+        db.close()
+
+        return jsonify({'message': 'Mascota actualizada exitosamente', 'res': True}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e), 'res': False}), 500
+    
+def eliminar_mascota(id):
+    try:         
+        db = conectar_db()
+        cursor = db.cursor()
+        cursor.execute("DELETE FROM mascotas WHERE id=%s", (id,))
+        db.commit()
+        cursor.close()
+        db.close()
+
+        return jsonify({'message': 'Mascota eliminada exitosamente', 'res': True}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e), 'res': False}), 500
