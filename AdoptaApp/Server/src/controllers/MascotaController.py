@@ -1,5 +1,6 @@
 from flask import jsonify, request
 from database.db import conectar_db
+import cloudinary.uploader
 
 def traer_mascotas():
     try:
@@ -59,14 +60,17 @@ def traer_mascotas_por_id(id):
 
 def registrar_mascota():
     try:
-        datos = request.get_json()
-
-        nombre = datos['nombre']
-        edad = datos['edad']
-        tamaño = datos['tamaño']
-        raza = datos['raza']
-        temperamento = datos['temperamento']
-        imagen_url = datos['imagen_url']
+        #Obtener los datos de la solicitud JSON
+        nombre = request.form['nombre']
+        edad = request.form['edad']
+        tamaño = request.form['tamaño']
+        raza = request.form['raza']
+        temperamento = request.form['temperamento']
+        
+        # Carga de imagen en Cloudinary
+        imagen_file = request.files['imagen_url']
+        imagen_resultado = cloudinary.uploader.upload(imagen_file)
+        imagen_url = imagen_resultado['secure_url']
 
         db = conectar_db()
         cursor = db.cursor()
