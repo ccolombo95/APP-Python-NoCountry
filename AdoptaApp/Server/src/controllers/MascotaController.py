@@ -122,3 +122,37 @@ def eliminar_mascota(id):
 
     except Exception as e:
         return jsonify({'error': str(e), 'res': False}), 500
+    
+"""********************* Filtros *********************"""
+
+def filtrar_mascotas():
+    try:
+        args = request.args
+        tamaño = args.get('tamaño')
+
+        db = conectar_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM mascotas WHERE tamaño=%s", (tamaño,))
+        mascotas = cursor.fetchall()
+        cursor.close()
+        db.close()
+
+        mascotas_filtradas = []
+        for mascota in mascotas:
+            mascota_id, nombre, edad, tamaño, raza, temperamento, imagen_url = mascota
+            mascotas_filtradas.append({
+                'mascota_id': mascota_id,
+                'nombre': nombre,
+                'edad': edad,
+                'tamaño': tamaño,
+                'raza': raza,
+                'temperamento': temperamento,
+                'imagen_url': imagen_url
+            })
+
+        return jsonify({'mascotas_filtradas': mascotas_filtradas, 'res': True}), 200
+    
+    except Exception as e:
+        return jsonify({'error': str(e), 'res': False}), 500
+
+
