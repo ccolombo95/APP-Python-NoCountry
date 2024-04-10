@@ -23,3 +23,9 @@ def update_mascota(id):
 @main.route('/eliminar/<int:id>', methods=['DELETE'])
 def delete_mascota(id):
     return eliminar_mascota(id)
+
+"""********************* Filtros *********************"""
+
+@main.route('/filtrar', methods=['GET'])
+def search():
+    return filtrar_mascotas()

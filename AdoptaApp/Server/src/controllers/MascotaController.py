@@ -86,14 +86,16 @@ def registrar_mascota():
 
 def actualizar_mascota(id):
     try:
-        datos = request.get_json()
 
-        nombre = datos['nombre']
-        edad = datos['edad']
-        tamaño = datos['tamaño']
-        raza = datos['raza']
-        temperamento = datos['temperamento']
-        imagen_url = datos['imagen_url']
+        nombre = request.form['nombre']
+        edad = request.form['edad']
+        tamaño = request.form['tamaño']
+        raza = request.form['raza']
+        temperamento = request.form['temperamento']
+
+        imagen_file = request.files['imagen_url']
+        imagen_resultado = cloudinary.uploader.upload(imagen_file)
+        imagen_url = imagen_resultado['secure_url']
 
         db = conectar_db()
         cursor = db.cursor()
@@ -120,3 +122,54 @@ def eliminar_mascota(id):
 
     except Exception as e:
         return jsonify({'error': str(e), 'res': False}), 500
+    
+"""********************* Filtros *********************"""
+
+def filtrar_mascotas():
+    try:
+        args = request.args
+        tamaño = args.get('tamaño')
+        edad = args.get('edad')
+
+        db = conectar_db()
+        cursor = db.cursor()
+
+        query = "SELECT * FROM mascotas WHERE 1"
+
+        params = []
+
+        if tamaño:
+            query += " AND tamaño=%s"
+            params.append(tamaño)
+        
+        if edad:
+            query += " AND edad=%s"
+            params.append(edad)
+
+        cursor.execute(query, params)
+        mascotas = cursor.fetchall()
+        cursor.close()
+        db.close()
+
+        mascotas_filtradas = []
+        for mascota in mascotas:
+            mascota_id, nombre, edad, tamaño, raza, temperamento, imagen_url = mascota
+            mascotas_filtradas.append({
+                'mascota_id': mascota_id,
+                'nombre': nombre,
+                'edad': edad,
+                'tamaño': tamaño,
+                'raza': raza,
+                'temperamento': temperamento,
+                'imagen_url': imagen_url
+            })
+        
+        if mascotas_filtradas:
+            return jsonify({'mascotas_filtradas': mascotas_filtradas, 'res': True}), 200
+        else:
+            return jsonify({'error': 'No se encontraron mascotas', 'res': False}), 404
+    
+    except Exception as e:
+        return jsonify({'error': str(e), 'res': False}), 500
+
+
