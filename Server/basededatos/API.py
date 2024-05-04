@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Create engine and session
-engine = create_engine('mysql+mysqlconnector://adoptaapp:NoCountry.2024@adoptaapp.mysql.pythonanywhere-services.com/adoptaapp$AdoptApp')
+engine = create_engine('mysql+mysqlconnector://usuario:contraseña@usuariomysql.pythonanywhere-services.com/usuario$baseDeDatos')
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
 
