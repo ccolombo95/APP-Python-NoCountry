@@ -1,0 +1,100 @@
+#PerfilMascotaContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#PerfilMascota {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    margin: 17vh  auto;
+    
+    background-color: #F3EDB4;
+    border-radius: 55px;
+}
+
+#PerfilMascota img {
+    border-radius: 100px;
+    width: 40%;
+    max-width: 600px;
+    padding: 5rem 3rem;
+}
+
+#MascotaInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    width: 40%;
+    height: 100%;
+    color: black;
+}
+
+#MascotaName {
+    display: inline-flex;
+    gap: 1rem;
+}
+#MascotaName span {
+    align-self: flex-end;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 .3rem 0;
+}
+
+#MascotaInfoList {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+#MascotaInfoList li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+#MascotaDescripcion {
+    font-size: 20px;
+    text-align: left;
+    max-width: 500px;
+}
+
+#BotonAdoptar{
+    justify-self: center;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #F0CADB;
+    padding: .5rem 2rem;
+    margin: 0 auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#BotonAdoptar:hover {
+    background-color: #f1aecd;
+    transform: translateY(-3px);
+    transition-delay: 600ms;
+}
+
+.corazon {
+    color: #BF3576;
+    
+}

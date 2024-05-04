@@ -1,0 +1,75 @@
+#LandingPageSection5Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh  auto 15vh auto;
+    width: 100%;
+    height: 100%;
+}
+#LandingPageSection5ContainerTittle{
+    font-size: 40px;
+    margin-bottom: 2rem;
+
+    color: #1E1E1E;
+    font-family: 'Lemon/Milk', sans-serif;
+}
+#LandingPageSection5ContainerInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+    max-width: 1150px;
+    background-color: #F3EDB4;
+    border-radius: 55px;
+}
+#LandingPageSection5ContainerInfo img#gatoimg {
+    width: 40%;
+    padding-right: 2rem;
+}
+
+#LandingPageSection5ContainerInfoList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0 2rem 3rem;
+    margin: 0;
+    gap: 2.5rem;
+    height: 100%;
+    width: 60%;
+ 
+}
+.LandingPageSection5ContainerInfoListItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+
+    white-space: wrap; 
+}
+.LandingPageSection5ContainerInfoListItem p {
+    font-family: "Urbanist", sans-serif;
+    color: #1E1E1E;
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 650px;
+
+}
+@media screen and (max-width:450px) {
+
+    #LandingPageSection5ContainerInfo{
+        flex-wrap: wrap;
+    }
+    #LandingPageSection5ContainerInfoList{
+        padding: 0;
+        margin: 0 auto;
+        width: 90%;
+    }
+    #LandingPageSection5ContainerInfo img#gatoimg {
+        width: 100%;
+        padding: 1rem 3rem 0 0;
+    
+    }
+}

@@ -1,0 +1,116 @@
+#LadingPageSection6Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2rem;
+
+    margin: 10vh  auto  1vh auto;
+    width: 100%;
+    height: 100%;
+    color: #1E1E1E;
+    
+}
+
+#LadingPageSection6ContainerLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 3.5rem;
+    width: 100%;
+    max-width: 550px;
+    
+}
+
+#LadingPageSection6ContainerLeftLogo{
+    width: 300px;
+    margin-right: 5rem;
+    
+    font-family: 'Lemon/Milk', sans-serif;
+    color: #DC277D;
+}
+
+#LadingPageSection6ContainerLeftImage{
+    height: 600px;   
+   
+}
+
+
+#LadingPageSection6ContainerRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+    gap: 2.5rem;
+    height: 100%;
+    width: 100%;
+    max-width: 750px;
+}
+
+
+#LadingPageSection6ContainerTittle{
+    font-family: 'Lemon/Milk', sans-serif;
+    margin: 1rem 0;
+}
+
+#LadingPageMap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+#LadingPageMap iframe{
+    border-radius: 42px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: solid 6px white;
+}
+#LadingPageSection6ContainerRightText{
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.8;
+    text-align: center;
+
+}
+
+#LadingPageSection6ContainerRightSocialContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 100%;
+    opacity: 40%;
+}
+#LadingPageSection6ContainerRightSocialContainer img {
+    width: 65px;
+}
+#copyright {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.788);
+    gap: 1rem;
+    width: 100%;
+    font-size:14px;
+    margin: 2rem auto 0rem auto;
+    padding: 1rem 0 .5rem 0;
+
+}
+#copyright a {
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+}
+
+@media screen and (max-width:400px) {
+    #LadingPageSection6ContainerTittle{
+        font-size: 30px;
+    }
+
+
+}

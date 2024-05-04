@@ -1,0 +1,18 @@
+.loader {
+    width: 200px;
+    height: auto;
+    margin-top: 500px;
+    animation: moveUpDown 1s infinite ease-in-out; /* 1 segundo de duración, animación infinita */
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(-10%); /* Comienza arriba */
+    }
+    50% {
+      transform: translateY(10%); /* Mueve hacia abajo */
+    }
+    100% {
+      transform: translateY(-10%); /* Vuelve a subir */
+    }
+  }

@@ -1,0 +1,201 @@
+#SectionMascotasContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    margin-top: 160px;
+}
+
+#MascotasContainer {
+    width: 80%;
+
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+
+
+    border-radius: 55px;
+    background: rgb(244,172,176);
+    background: linear-gradient(90deg, rgba(244,172,176,1) 25%, rgba(203,226,253,1) 66%);
+
+}
+#SectionMascotasFiltercontainerUpPerroSelec{
+    color: rgb(255, 255, 255);
+    font-family: 'Urbanist', sans-serif;
+    font-size: 60px;
+    transition: 0.5s ease;
+}
+#SectionMascotasFiltercontainerUpPerroNoSelec{
+    color: #000000;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 60px;
+    transition: 0.5s ease;
+}
+
+#SectionMascotasFiltercontainerUpGatoSelec{
+    color: rgb(255, 255, 255);
+    font-family: 'Urbanist', sans-serif;
+    font-size: 60px;
+    transition: 0.5s ease;
+}
+#SectionMascotasFiltercontainerUpGatoNoSelec{
+    color: #000000;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 60px;
+    transition: 0.5s ease;
+}
+#SectionMascotasInputContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    padding: .5rem 2rem;
+
+    border-radius: 55px;
+    border: none;
+    background-color: #D5E886;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+
+}
+
+#SectionMascotasInput{
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 26px;
+    cursor: pointer;
+
+}
+#SectionMascotasInputImage{
+    width: 30px;
+    margin-left: 1rem;
+}
+#SectionMascotasInput:focus {
+    outline: none;
+    box-shadow: none;
+
+}
+#SectionMascotasInput::placeholder{
+color: rgb(74, 74, 74);
+}
+    
+
+
+#SectionMascotasFiltrosContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+#SectionMascotasFiltercontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ 
+    height:100%;
+    width: 100%;
+
+}
+
+#SectionMascotasFiltercontainerUp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+}
+#SectionMascotasFiltercontainerUp h1 {
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+}
+#SectionMascotasFiltercontainerUp .CatSelect {
+    border-bottom-left-radius: 55px;
+    border-top-right-radius: 55px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2); 
+}
+#SectionMascotasFiltercontainerUp .CatNoSelect {
+    /* border-bottom-left-radius: 55px; */
+    border-top-right-radius: 55px;
+    /* box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);  */
+}
+#SectionMascotasFiltercontainerUp .DogSelect {
+    border-bottom-right-radius: 55px;
+    border-top-left-radius: 55px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+}
+#SectionMascotasFiltercontainerUp .DogNoSelect {
+    /* border-bottom-right-radius: 55px; */
+    border-top-left-radius: 55px;
+    /* box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.2);  */
+    
+}
+
+#SectionMascotasFiltercontainerDown{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+
+    margin: 2rem 0;
+}
+
+.SectionMascotasFilter{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.SectionMascotasFilterSelect{
+    background-color: #1E1E1E;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: .5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.SectionMascotasFilterSelect:focus{
+    outline: none;
+    box-shadow: none;
+    background-color: #1e1e1ee6;
+}
+
+
+#SectionMascotasCardsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+

@@ -1,0 +1,21 @@
+.container-section4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.container-section4-title{
+    color: #1E1E1E;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-family: 'Lemon/Milk', sans-serif;
+}
+
+.container-section4-slider{
+    margin: 3rem;
+    width: 100vw;
+}

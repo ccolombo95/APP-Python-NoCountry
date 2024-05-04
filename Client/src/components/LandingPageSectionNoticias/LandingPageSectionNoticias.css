@@ -1,0 +1,115 @@
+.container-noticias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: black;
+}
+
+
+.container-section-noticias-title h2{
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    line-height: 54.02px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.noticias {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 90%;
+}
+
+
+.container-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+}
+
+
+.container-left .noticia .container-imagen{
+    height: 250px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 55px;
+}
+
+
+
+.container-right{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+}
+.container-right .noticia1 .container-imagen {
+    height: 250px;
+    border-radius: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 55px;
+}
+
+.container-right .noticia2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.container-right .noticia2 .container-imagen {
+    height: 370px;
+
+    width: 270px;
+    border-radius: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 55px;
+
+}
+
+
+.noticia-container-text {
+    padding: 1rem .3rem; 
+}
+
+.noticia-container-text-title {
+    padding-bottom: .5rem ;
+}
+
+@media screen and (max-width:880px)  {
+    .noticias {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .container-left{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80%;
+    }
+    .container-right{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80%;
+    }
+    @media screen and (max-width:500px)  {
+        .container-right .noticia2 {
+            flex-direction: column;
+        }
+
+    }   
+}

@@ -1,0 +1,118 @@
+.container-form {
+  padding-top: 2rem;
+  width: 80%;
+  margin-top: 9rem;
+  margin-left: 7rem;
+  background: #f3edb4;
+  border-radius: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem ;
+  margin-bottom: 4rem;
+  margin-left: 11rem;
+  font-size: 18px;
+
+}
+
+.FomularioAdopcion {
+    width: 75%;
+    
+}
+
+form .container-lable-input {
+    margin-top: 1rem;
+}
+
+
+
+
+form .container-lable-input input {
+    width: 100%;
+    height: 3.25rem;
+    background: #ffffff;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.submit-btn{
+    background: #DC277D;
+    width: 372px;
+    height: 53px;
+}
+.submit-btn:hover{
+  background: #dc277ecb;
+}
+
+
+.container-form h1 {
+  color: black;
+}
+
+/* Estilo para el select */
+select {
+    /* Ancho */
+    width: 100%;
+    /* Altura */
+    height: 40px;
+    /* Borde */
+    border: 1px solid #ccc;
+    /* Borde redondeado */
+    border-radius: 5px;
+    /* Padding */
+    padding: 5px;
+    /* Fuente */
+    font-size: 16px;
+    /* Color del texto */
+    color: #333;
+    /* Fondo */
+    background-color: #fff;
+    /* Apariencia del cursor */
+    cursor: pointer;
+  }
+  
+  /* Estilo para las opciones del select */
+  select option {
+    /* Color del texto */
+    color: #333;
+    /* Fondo */
+    background-color: #fff;
+  }
+  
+  /* Estilo para la flecha del select */
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /* Pseudo-clase para el foco */
+  select:focus {
+    /* Estilo al tener el foco */
+    border-color: #007bff; /* Cambia el color del borde al tener el foco */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Agrega un efecto de sombra al tener el foco */
+  }
+
+  /* Errors */
+
+  #FormAlert{
+    display: none;
+    margin: 1rem;
+    width: 270px;
+    margin: 1rem auto 0 auto;
+    background: rgb(235, 122, 122);
+    text-align: center;
+    justify-self: center;
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+  }

@@ -1,0 +1,57 @@
+#ContratoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+#ContratoMascota {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin: 150px auto;
+    padding: 2rem 3rem;
+
+    color: black;
+    background-color: #F3EDB4;
+    border-radius: 55px; 
+}
+
+#ContratoTittle {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+#ContratoMascota h3 {
+    padding: 1rem 0rem;
+    width: 80%;
+    
+} 
+#ContratoMascota ul {
+    width: 75%;
+    list-style: decimal;  
+   
+}
+.container-boton {
+    margin-top: 2rem;
+}
+#ContratoBoton {
+    justify-self: center;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #F0CADB;
+    padding: .5rem 2rem;
+    margin: 2rem auto 1rem auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+
