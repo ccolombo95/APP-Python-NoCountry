@@ -26,12 +26,14 @@
     font-family: 'Urbanist', sans-serif;
     font-size: 60px;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 #SectionMascotasFiltercontainerUpPerroNoSelec{
     color: #000000;
     font-family: 'Urbanist', sans-serif;
     font-size: 60px;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 #SectionMascotasFiltercontainerUpGatoSelec{
@@ -39,12 +41,14 @@
     font-family: 'Urbanist', sans-serif;
     font-size: 60px;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 #SectionMascotasFiltercontainerUpGatoNoSelec{
     color: #000000;
     font-family: 'Urbanist', sans-serif;
     font-size: 60px;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 #SectionMascotasInputContainer{
     display: flex;
